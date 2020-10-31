@@ -19,3 +19,10 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
+
+class Answer(models.Model):
+    answer_text = models.CharField(max_length=300)
+    pub_date = models.DateTimeField('date published')
+    def __str__(self):
+        return self.answer_text
+
